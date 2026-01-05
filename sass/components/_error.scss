@@ -1,0 +1,52 @@
+@use './../abstracts/functions' as *;
+@use './../abstracts/mixins' as *;
+
+.error {
+    @include flex-center(center, center);
+    gap: 1rem;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 4.8rem;
+
+    &_message {
+        color: color(fail, 500);
+        text-transform: capitalize;
+        font-size: 2.5rem;
+        @include flex-center(center, center);
+        gap: 1rem;
+    }
+
+    &_recommand {
+        color: color(fail, 200);
+        text-align: justify;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+        font-size: 1.5rem;
+        font-style: italic;
+        letter-spacing: 1px;
+    }
+
+    &_start-searching {
+        @include flex-center(center, center);
+        flex-direction: column;
+
+        gap: 2rem;
+        margin-top: 4rem;
+        padding: 4.8rem;
+
+        & p:nth-of-type(1) {
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            color: color(golden, 900);
+
+            @include flex-center(center, center);
+            gap: 1rem;
+        }
+
+        & p:nth-of-type(2) {
+            font-size: 1.4rem;
+            letter-spacing: 1px;
+            color: color(golden, 100);
+        }
+    }
+}

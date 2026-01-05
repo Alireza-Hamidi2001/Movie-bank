@@ -1,0 +1,37 @@
+@use './../abstracts/functions' as *;
+@use './../abstracts/mixins' as *;
+
+.search {
+    justify-self: center;
+    border: none;
+    padding: 1.1rem 1.6rem;
+    font-size: 1.8rem;
+    border-radius: 0.4rem;
+    width: 40rem;
+    transition: all 0.3s;
+    color: var(--color-text);
+    background: color(primary, 600);
+    box-shadow: 0 0rem 0.4rem rgb(0, 0, 0);
+    position: relative;
+
+    &::placeholder {
+        font-family: 'noto';
+        font-weight: 100;
+        font-size: 1.4rem;
+        color: color(black, 100);
+    }
+
+    &_icon {
+        font-size: 2rem;
+        position: absolute;
+        top: 5rem;
+        transform: translateX(-3rem);
+        color: color(black, 100);
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 0rem 1rem rgb(0, 0, 0);
+        transform: translateY(-1px);
+    }
+}

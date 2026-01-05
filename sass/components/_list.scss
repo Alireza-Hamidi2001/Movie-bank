@@ -1,0 +1,87 @@
+@use './../abstracts/functions' as *;
+@use './../abstracts/mixins' as *;
+
+.list {
+    list-style: none;
+    padding: 0.8rem 0;
+    overflow: auto;
+
+    & li {
+        position: relative;
+        display: grid;
+        grid-template-columns: 6rem 1fr;
+        grid-template-rows: auto auto;
+        column-gap: 2.4rem;
+        font-size: 1.6rem;
+        align-items: center;
+
+        cursor: pointer;
+
+        padding: 1rem 2rem;
+        border-bottom: 1px solid color(black, 600);
+    }
+
+    & img {
+        width: 100%;
+        box-shadow: 0 0 1rem color(black, 900);
+        grid-row: 1 / -1;
+    }
+
+    & h3 {
+        font-size: 1.8rem;
+        font-weight: 100;
+        font-family: 'KottaOne';
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        color: color(black, 50);
+    }
+
+    & div {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+    }
+
+    & .year {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+
+        & span {
+            font-size: 1.4rem;
+            font-family: 'Courgette';
+            color: color(black, 200);
+        }
+    }
+
+    & .type {
+        & span {
+            font-size: 1.2rem;
+            font-family: 'Edu';
+            color: color(black, 200);
+            letter-spacing: 1px;
+        }
+    }
+}
+
+.list-watched {
+    height: calc(100% - 9rem);
+}
+
+.list li {}
+
+.list.list-movies li {
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.list.list-movies li:hover {
+    background-color: var(--color-background-100);
+}
+
+.watched_icon {
+    margin-right: 0.5rem;
+    color: color(black, 300);
+    position: relative;
+    top: 2px;
+}

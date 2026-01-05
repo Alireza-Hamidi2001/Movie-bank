@@ -1,0 +1,12 @@
+@use './../abstracts/functions' as *;
+@use './../abstracts/mixins' as *;
+
+.nav-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    height: 7.2rem;
+    padding: 0 3.2rem;
+    background-color: color(primary, 700);
+    border-radius: 0.5rem;
+}

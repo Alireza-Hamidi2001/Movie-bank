@@ -1,0 +1,34 @@
+@use './global' as *;
+// ABSTRACTS
+@use "abstracts/functions";
+@use "abstracts/mixins";
+@use "abstracts/variables";
+
+// BASE 
+@use "base/base";
+@use "base/typography";
+
+// COMPONENTS 
+@use "components/box";
+@use "components/btn";
+@use "components/details";
+@use "components/error";
+@use "components/list";
+@use "components/loader";
+@use "components/logo";
+@use "components/navBar";
+@use "components/numResult";
+@use "components/rating";
+@use "components/search";
+@use "components/seconds";
+@use "components/summary";
+@use "components/main";
+
+
+
+// LAYOUTS 
+@use "layouts/footer";
+
+// PAGES 
+// THEMES
+// VENDORS
