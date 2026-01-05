@@ -8,6 +8,14 @@
     font-size: 2rem;
     padding: 4.8rem;
 
+    @include respond(tab-port) {
+        padding: 3rem;
+    }
+
+    @include respond(phone) {
+        padding: 1rem;
+    }
+
     &_message {
         color: color(fail, 500);
         text-transform: capitalize;
@@ -33,6 +41,14 @@
         gap: 2rem;
         margin-top: 4rem;
         padding: 4.8rem;
+
+        @include respond(tab-port) {
+            padding: 3rem;
+        }
+
+        @include respond(phone) {
+            padding: 1rem;
+        }
 
         & p:nth-of-type(1) {
             text-transform: capitalize;

@@ -35,6 +35,10 @@
             padding: 2rem;
         }
 
+        @include respond(phone) {
+            padding: 1rem;
+        }
+
         & .plot {
             font-family: sans-serif;
             font-size: 1.8rem;
