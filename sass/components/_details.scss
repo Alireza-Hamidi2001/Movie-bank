@@ -9,7 +9,18 @@
     flex-direction: column;
 
     & header {
-        @include flex-center(center, null);
+        // @include flex-center(center, null);
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+
+        @include respond(phone) {
+            grid-template-columns: 1fr;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     & section {
@@ -20,10 +31,13 @@
         font-family: sans-serif;
         letter-spacing: 0.5px;
 
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
+
         & .plot {
-            text-align: justify;
-            -webkit-hyphens: auto;
-            hyphens: auto;
+            font-family: sans-serif;
+            font-size: 1.8rem;
 
             svg:first-child {
                 margin-right: 0.5rem;
@@ -33,17 +47,20 @@
         }
 
         & .actors {
-            @include flex-center(null, center);
+            font-family: sans-serif;
+            font-size: 1.4rem;
 
             svg:first-child {
                 margin-right: 0.5rem;
                 color: color(black, 300);
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
         }
 
         & .director {
             @include flex-center(null, center);
+            font-family: sans-serif;
+            font-size: 1.4rem;
 
             svg:first-child {
                 margin-right: 0.5rem;
@@ -86,7 +103,7 @@
 }
 
 .datials_rating {
-    color: color(black, 400);
-    @include flex-center(null, center);
+    color: color(golden, 500);
+    // @include flex-center(null, center);
 
 }

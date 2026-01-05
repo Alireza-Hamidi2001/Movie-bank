@@ -11,8 +11,16 @@
     transition: all 0.3s;
     color: var(--color-text);
     background: color(primary, 600);
-    box-shadow: 0 0rem 0.4rem rgb(0, 0, 0);
+    box-shadow: 0 0rem 0.4rem rgba(0, 0, 0, 0.508);
     position: relative;
+
+    @include respond(tab-port) {
+        width: 30rem;
+    }
+
+    @include respond(phone) {
+        width: 25rem;
+    }
 
     &::placeholder {
         font-family: 'noto';
@@ -27,6 +35,10 @@
         top: 5rem;
         transform: translateX(-3rem);
         color: color(black, 100);
+
+        @include respond(tab-port) {
+            top: 3.8rem;
+        }
     }
 
     &:focus {

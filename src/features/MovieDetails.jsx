@@ -125,7 +125,7 @@ function MovieDetails({
                         <div className="rating">
                             <StarRating
                                 maxRating={10}
-                                size={24}
+                                size={12}
                                 onSetRating={setUserRating}
                             />
                             {userRating ? (
@@ -157,6 +157,7 @@ function MovieDetails({
                                 className="datials_rating"
                             >
                                 <MdStarRate />
+                                &nbsp;&nbsp;
                                 {rating.Source}
                                 &nbsp;&bull;&nbsp;
                                 {rating.Value}

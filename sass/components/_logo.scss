@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .logo {
     display: flex;
     align-items: center;
@@ -5,6 +7,10 @@
 
     & img {
         width: 17rem;
+
+        @include respond(tab-port) {
+            width: 14rem;
+        }
     }
 }
 

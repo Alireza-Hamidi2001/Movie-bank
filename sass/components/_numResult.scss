@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+
 .num-results {
     justify-self: end;
     font-size: 1.8rem;
@@ -5,4 +7,8 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    @include respond(phone) {
+        display: none;
+    }
 }

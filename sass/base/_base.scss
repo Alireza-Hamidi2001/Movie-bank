@@ -13,7 +13,19 @@ html {
     font-size: 62.5%;
     box-sizing: inherit;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-background-900) var(--color-background-500);
+    scrollbar-color: var(--color-background-800) var(--color-background-500);
+
+    @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+
+    @include respond(phone) {
+        font-size: 43.75%;
+    }
 }
 
 body {
@@ -21,6 +33,11 @@ body {
     padding: 2.4rem;
     color: var(--color-text);
     background-color: var(--color-background-900);
+
+    @include respond(tab-port) {
+        padding: 1.2rem;
+        font-size: 50%;
+    }
 }
 
 
