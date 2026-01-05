@@ -17,9 +17,6 @@ function AppContainer({
 }) {
     const [watched, setWatched] = useState([]);
 
-    // console.log(userRating);
-    // console.log(watched);
-
     return (
         <main className="main">
             <Box>
